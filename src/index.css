@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  image-rendering: -moz-crisp-edges !important;
+  image-rendering: -moz-crisp-edges !important;
+  image-rendering: -o-crisp-edges !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  -ms-interpolation-mode: nearest-neighbor !important;
+  image-rendering: pixelated !important;
+}
+
+html, body {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.main_wrapper {
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

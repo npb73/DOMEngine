@@ -1,0 +1,193 @@
+.player_container {
+  width: calc(100% / 5);
+  height: calc(100% / 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform-origin: center center;
+  box-sizing: border-box;
+
+  .health_bar {
+    position: absolute;
+    z-index: 10;
+    margin-top: -50%;
+    width: 30%;
+    height: 4%;
+
+    background-color: red;
+
+    .health {
+      height: 100%;
+      background-color: green;
+    }
+  }
+
+  .player {
+    width: 33.3%;
+    height: 33.3%;
+    position: relative;
+
+    .player_body {
+      position: absolute;
+      background-image: url('../../assets/sprites/players.png');
+      background-repeat: repeat-x;
+      width: 100%;
+      height: 100%;
+      background-size: auto 100%;
+      transition: margin-top 0.15s;
+      animation: stay 2s ease-in-out infinite;
+      z-index: 2;
+
+    }
+
+    .player_legs {
+      position: absolute;
+      background-image: url('../../assets/sprites/legs.png');
+      background-repeat: repeat-x;
+      width: 100%;
+      height: 100%;
+      background-size: auto 100%;
+      border-bottom: solid 10% rgb(0,0,0,0.5);
+      z-index: 3;
+    }
+
+    .player_shadow {
+      width: 100%;
+      height: 33%;
+      position: absolute;
+      bottom: -15%;
+      background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0) 100%);
+    }
+  }
+
+  .player_aura {
+    width: 33%;
+    height: 33%;
+
+    position: absolute;
+
+    animation: aura 10s linear infinite ;
+    transform-origin: 150%;
+    left: 0;
+
+    .sword {
+      width: 100%;
+      height: 400%;
+      left: 100%;
+      bottom: 100%;
+      position: absolute;
+      background-image: url(../../assets/sprites/sword.png);
+      background-size: auto 100%;
+      z-index: 5;
+    }
+
+    .aura_icon {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation: aura 6s linear reverse infinite;
+      color: white;
+      font-size: 2vh;
+    }
+  }
+}
+
+.player_aura, .sword {
+  will-change: transform;
+}
+
+@keyframes aura {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.player_dead_animation {
+  animation: player_dead 3s linear forwards;
+  position: absolute;
+}
+
+@keyframes player_dead {
+  0% {
+    top: 0vh;
+    transform: scale(1) rotate(0deg)
+  }
+
+  30% {
+    transform: scale(4) rotate(390deg);
+    opacity: 1;
+  }
+
+  60% {
+    transform: scale(5) rotate(420deg);
+    opacity: 1;
+    top: 0vh;
+  }
+
+  100% {
+    top: 100vh;
+    transform: scale(0) rotate(999deg);
+    opacity: 0;
+  }
+}
+
+
+.invulnerability_animation {
+  animation: invulnerability 1s ease-in-out infinite;
+}
+
+@keyframes invulnerability {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.test_new_sword {
+  width: 1vh;
+  height: 1vh;
+  border-radius: 1vh;
+  background-color: red;
+  position: absolute;
+  margin: 50% 50%;
+}
+
+.sword {
+  width: 33.3%;
+  height: 166.66%;
+  position: absolute;
+  transform-origin: 50% 108%;
+  background-image: url('../../assets/sprites/swords.png');
+  background-size: auto 100%;
+  top: -127%;
+}
+
+@keyframes stay {
+  0% {
+    top: 0%;
+  }
+
+  50% {
+    top: -10%;
+  }
+
+  100% {
+    top: 0%;
+  }
+}
