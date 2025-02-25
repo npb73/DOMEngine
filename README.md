@@ -1,4 +1,7 @@
 # Swordmaster Gambler (DOMEngine)
+
+[ИГРАТЬ](https://example.com "Netlify.app")
+
 <image src="preview/gameplay.gif"></image>
 
 
