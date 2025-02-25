@@ -1,13 +1,5 @@
 # DOMEngine
-<div style="display: flex">
-<video width="320" height="320" autoplay controls>
-  <source src="./videos/game.mp4" type="video/mp4" >
-</video>
-
-<video width="320" height="320" autoplay controls>
-  <source src="./videos/game2.mp4" type="video/mp4">
-</video>
-</div>
+<image src="preview/gameplay.gif"></image>
 
 
 ## Процесс игры: 
@@ -19,4 +11,6 @@
 5. Убиваешь всех врагов
 6. Крутишь казик.
 
+## Стек:
 
+Typescript, React, Zustand
