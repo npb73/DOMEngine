@@ -1,0 +1,70 @@
+.area_main_container {
+  width: 70vh;
+  height: 70vh;
+
+  max-width: 70vw;
+  max-height: 70vw;
+
+  background-color: #262b44;
+  position: relative;
+  box-sizing: border-box;
+  will-change: transform;
+  background-image: url('../../assets/sprites/tile2.png');
+  background-size: 20%;
+
+  z-index: 5;
+}
+
+@keyframes explode {
+  0% {
+    transform: translateX(-5vh);
+  }
+
+  20% {
+    transform: translateX(4vh);
+  }
+
+  40% {
+    transform: translateX(-3vh);
+  }
+
+  60% {
+    transform: translateX(2vh);
+  }
+
+  80% {
+    transform: translateX(-1vh);
+  }
+
+  100% {
+    transform: translateX(0vh);
+  }
+}
+
+.low_hp_animation {
+  animation: low_hp 8s ease-in-out infinite;
+}
+
+.dead_animation {
+  animation: dead 1s ease-in-out forwards !important;
+  animation-delay: 1.5s !important;
+}
+
+@keyframes dead {
+  0% {
+    filter: brightness(1) grayscale(0) invert(0);
+    box-shadow: 0px 0px 0px white;
+  }
+
+  50% {
+    box-shadow: 0px 0px 20vh 5vh white, 0px 0px 100vh rgb(255,255,255,0.6);
+  }
+
+  100% {
+    filter: brightness(3) grayscale(1) invert(1);
+  }
+}
+
+.damage_animation {
+  animation: explode 0.3s ease-in-out !important;
+}
