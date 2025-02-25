@@ -1,4 +1,4 @@
-# DOMEngine
+# Swordmaster Gambler (DOMEngine)
 <image src="preview/gameplay.gif"></image>
 
 
