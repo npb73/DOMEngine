@@ -1,6 +1,6 @@
 # Swordmaster Gambler (DOMEngine)
 
-[ИГРАТЬ](https://example.com "Netlify.app")
+[ПОИГРАТЬ](https://swordmaster-gambler.netlify.app/) (Чтобы поменять шмотки - нужно поменять сид в url)
 
 <image src="preview/gameplay.gif"></image>
 
